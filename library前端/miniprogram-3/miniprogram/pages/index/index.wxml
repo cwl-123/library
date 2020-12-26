@@ -1,0 +1,30 @@
+<!--<import src="../../tabbarComponent/tabbar.wxml"/>-->
+<view class="news1-container">
+  <image class='background' src="https://i.loli.net/2020/11/14/E17zSTLjnkFwZyH.jpg" mode='widthFix'></image>
+  <swiper  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" 
+  duration="{{duration}}"circular="true" >   
+  <block wx:for="{{img}}" wx:for-index="index">  
+    <swiper-item class="picture">  
+     <image src="{{item}}" class="slide-image"/>  
+    </swiper-item>  
+   </block>    
+   </swiper>
+   <text class="allowance">
+     图书馆座位余量：{{showNumber}}位
+   </text>
+   <button class="button1" bindtap="searchClick">
+    <view class="text1">
+      自主选座
+       <view class="text11">用户自主选择座位</view>
+    </view>
+    <image class="search" src="https://i.loli.net/2020/11/04/Jk8ToWmeRfNdZcV.png"></image>
+   </button>
+   <button class="button2" bindtap="selectClick">
+       <view class="text1">
+        一键选座
+       <view class="text11">系统随机分配座位</view>
+       </view>
+       <image class="select" src="https://i.loli.net/2020/11/04/KoAj6aQ4MJmVyg1.png"></image>
+   </button>
+   <!--<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>-->
+</view>

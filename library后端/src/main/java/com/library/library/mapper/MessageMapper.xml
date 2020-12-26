@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.library.library.dao.MessageDao">
+
+    <resultMap id="message" type="com.library.library.pojo.Message">
+        <result column="unionid" jdbcType="VARCHAR" property="unionid"/>
+        <result column="seat_id" jdbcType="VARCHAR" property="seat_id"/>
+        <result column="time_slot" jdbcType="INTEGER" property="time_slot"/>
+        <result column="is_confirm" jdbcType="INTEGER" property="is_confirm"/>
+    </resultMap>
+
+    <resultMap id="messagecontent" type="com.library.library.pojo.MessageContent">
+        <result column="unionid" jdbcType="VARCHAR" property="unionid"/>
+        <result column="seat_id" jdbcType="VARCHAR" property="seat_id"/>
+        <result column="time_slot" jdbcType="INTEGER" property="time_slot"/>
+        <result column="is_confirm" jdbcType="INTEGER" property="is_confirm"/>
+    </resultMap>
+    
+    <resultMap id="messagecontentDto" type="com.library.library.pojo.MessageContentDto">
+        <result column="unionid" jdbcType="VARCHAR" property="unionid"/>
+        <result column="seat_id" jdbcType="VARCHAR" property="seat_id"/>
+        <result column="time_slot" jdbcType="INTEGER" property="time_slot"/>
+        <result column="is_confirm" jdbcType="INTEGER" property="is_confirm"/>
+    </resultMap>
+
+    <resultMap id="seatExtra" type="com.library.library.pojo.SeatExtra">
+        <result column="seat_id" jdbcType="VARCHAR" property="seat_id"/>
+        <result column="area_name" jdbcType="VARCHAR" property="seat_id"/>
+        <result column="is_window" jdbcType="INTEGER" property="time_slot"/>
+        <result column="is_plug" jdbcType="INTEGER" property="if_confirm"/>
+    </resultMap>
+
+    <resultMap id="favorMsg" type="com.library.library.pojo.FavorMsg">
+        <result column="unionid" jdbcType="VARCHAR" property="unionid"/>
+        <result column="seat_list" jdbcType="VARCHAR" property="seat_list"/>
+    </resultMap>
+
+    <select id="getMessageList" resultType="com.library.library.pojo.Message">
+        use library
+        select seat_id
+        from occupy
+        where(unionid =#{unionid})
+    </select>
+
+    <select id="getMessageLst" resultType="com.library.library.pojo.Message">
+        use library
+        select *
+        from occupy
+        where(unionid =#{unionid})
+    </select>
+    <select id="getExtraMessage" resultType="java.lang.String">
+        use library
+        select area_name
+        from seat
+        where seat_id=#{seat_id}
+    </select>
+    <select id="getExMsg" resultType="com.library.library.pojo.SeatExtra">
+        use library
+        select *
+        from seat
+        where seat_id=#{seat_id}
+    </select>
+    <select id="getMessageContentDto" resultType="java.lang.Object">
+        use library
+        select*
+        from seat
+        where seat_id=#{seat_id};
+    </select>
+
+    <delete id="cancle">
+        use library
+        delete  from occupy
+        where (seat_id=#{seat_id}
+        and unionid=#{unionid} and time_slot=#{time_slot})
+    </delete>
+
+    <select id="checkCollection" resultType="java.lang.String">
+        use library
+        select seat_list
+        from favorites
+        where unionid=#{unionid}
+    </select>
+
+    <insert id="addCollection">
+        use library
+        insert into favorites(unionid,seat_list)
+        values(#{unionid},#{seat_list})
+    </insert>
+
+    <insert id="addOcu" >
+        use library
+        insert  into seat(seat_id,area_name,is_window,is_plug)
+        values(#{seat_id},#{area_name},#{is_window},#{is_plug})
+    </insert>
+
+    <delete id="deleteCollection" >
+        use library
+        delete from favorites
+        where (unionid like #{unionid})
+    </delete>
+
+    <delete id="del">
+        use library
+        delete from occupy
+    </delete>
+
+</mapper>

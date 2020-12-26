@@ -1,0 +1,101 @@
+<!--pages/reservation/reservation.wxml-->
+<view class="container">
+  <image class="background" src='https://i.loli.net/2020/11/04/EcpflBoZKIqUVRT.jpg' mode="aspectFilla"> </image>
+  <view class="flexbox1">
+    <view class='box1' style="opacity:{{0.7}}">
+      <text class='head_font'>同学，请选择你的座位要求吧！</text>
+    </view>
+  </view>
+  <view class="flexbox2">
+    <view class='box2' style="opacity:{{0.8}}">
+      <text class='body_font' space="ensp" decode="{{true}}">&ensp; &ensp; 我们能做的只有:继续守护自己选择的小世界;既然预约了座位，就要安心学习。</text>
+    </view>
+  </view>
+  <view class="flexbox3">
+
+    <view class="box_tip">
+      <text class="tip_left">请选择预约时间:</text>
+      <text class="tip_right">请选择座位区域：</text>
+    </view>
+
+    <view class="box_bu">
+      <view class="bu_left">
+        <text bindtap="btn">请选择预约时间</text>
+      </view>
+      <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+      <!-- 弹出层 -->
+      <view class="modalDlg" wx:if="{{showModal}}">
+        <view class="modaltitle">
+          <button class="modalbtn_confirm" bindtap="ok">确认</button>
+          <button class="modalbtn_cancel" bindtap="cancel">取消</button>
+        </view>
+
+        <checkbox-group class="modalcheck" bindchange="checkboxChange">
+          <label class="box" wx:for="{{items}}">
+            <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+            <view class="label_de">{{item.name}}</view>
+          </label>
+        </checkbox-group>
+      </view>
+      <view class="bu_right">
+        <picker bindchange="bindPickerChange_floor" value="{{floor_index}}" range="{{floor_chooseshow}}">
+          <view class="picker">
+            {{floor_data[floor_index].show}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="mid_tip" wx:if="{{display}}">
+      <text class="mid_left">您已预约的时段:</text>
+      <text class="mid_right">对应时间的座位余量:</text>
+    </view>
+
+
+
+    <view class="suc">
+      <view class="showtimebox">
+        <view class="showtime" wx:if="{{display}}">
+          <view wx:if="{{timeshow1}}">{{timeshow1}}</view>
+          <view wx:if="{{timeshow2}}">{{timeshow2}}</view>
+          <view wx:if="{{timeshow3}}">{{timeshow3}}</view>
+        </view>
+      </view>
+      <view class="yuan" bindtap="selectClick">
+        <text class="suc_yuan" decode="{{true}}"> 确认\n预约</text>
+      </view>
+      <view class="showfloorbox">
+        <view class="showfloor" wx:if="{{display}}">
+          <view wx:if="{{floorseat1!='kong'}}">座位余量:{{floorseat1}}</view>
+          <view wx:if="{{floorseat2!='kong'}}">座位余量:{{floorseat2}}</view>
+          <view wx:if="{{floorseat3!='kong'}}">座位余量:{{floorseat3}}</view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="box_tip_under">
+      <text class="tip_left">是否需要插座:</text>
+      <text class="tip_right">是否需要靠窗：</text>
+    </view>
+
+    <view class="box_bu_under">
+      <view class="bu_left">
+        <picker bindchange="bindPickerChange_plug" value="{{plug_index}}" range="{{plug_chooseshow}}">
+          <view class="picker">
+            {{plug_data[plug_index].show}}
+          </view>
+        </picker>
+      </view>
+      <view class="bu_right">
+        <picker bindchange="bindPickerChange_window" value="{{window_index}}" range="{{window_chooseshow}}">
+          <view class="picker">
+            {{window_data[window_index].show}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+
+  </view>
+</view>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.library.library.dao.UserDao">
+    <resultMap id="User" type="com.library.library.pojo.User">
+        <result column="unionid" jdbcType="VARCHAR" property="unionid" />
+        <result column="mp_openid" jdbcType="VARCHAR" property="mp_openid" />
+        <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+        <result column="sign" jdbcType="VARCHAR" property="sign" />
+    </resultMap>
+
+    <select id="getUnionIdByMpOpenId" resultType="String">
+        use library
+        select unionid from sys_user where mp_openid = #{mp_openid};
+    </select>
+
+    <select id="getMaxUnionId" resultType="String">
+        use library
+        select MAX(unionid) from sys_user;
+    </select>
+
+    <select id="InsertUnionId" resultType="String">
+        use library
+        insert into sys_user
+        values (#{unionid},#{mp_openid},'','','')
+    </select>
+
+    <select id="getUserMessage" resultType="User">
+        use library
+        select unionid, mp_openid, nickname, avatar, sign
+        from sys_user
+        where unionid = #{unionid};
+    </select>
+
+    <update id="postUserSign">
+        use library
+        update sys_user set sign = #{sign} where unionid = #{unionid};
+    </update>
+
+    <update id="postUserMessage">
+        use library
+        update sys_user
+        set sign = #{sign} , mp_openid = #{mp_openid} , avatar= #{avatar} , nickname=#{nickname}
+        where unionid = #{unionid};
+    </update>
+</mapper>
