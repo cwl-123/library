@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433
+    username: sa
+#    password: Aa123456
+    password: root
+
+  redis:
+    jedis:
+      pool:
+        max-active: 20
+        max-idle: 8
+        max-wait: 3000
+    port: 6379
+    host: localhost
+    timeout: 3000
+
+mybatis:
+  mapper-locations: classpath:com/library/library/mapper/*.xml
+  type-aliases-package: com.library.library.pojo
+  type-handlers-package: com.library.library.handler
+
+
+
+
+
+

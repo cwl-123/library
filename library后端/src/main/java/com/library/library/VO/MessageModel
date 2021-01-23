@@ -1,0 +1,10 @@
+package com.library.library.VO;
+import com.library.library.pojo.MessageContentDto;
+import  lombok.Data;
+import java.sql.Timestamp;
+import java.util.List;
+@Data
+public class MessageModel
+{
+    private List<MessageContentDto>data;
+}
