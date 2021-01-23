@@ -1,0 +1,132 @@
+
+<view class="flex-container">
+  <view class="flex-box" wx:for="{{len}}">
+    <view class="flex-item1">
+      <image wx:if="{{index==0}}" src="https://i.loli.net/2020/11/06/TH1mSectB6OUZVx.png" class="yuan"></image>
+      <image wx:if="{{index==1}}" src="https://i.loli.net/2020/11/06/VQsqfXMZGEuvkmz.png" class="yuan"></image>
+      <image wx:if="{{index==2}}" src="https://i.loli.net/2020/11/06/Vf2m97eExOTbL5I.png" class="yuan"></image>
+      <image wx:if="{{index==3}}" src="https://i.loli.net/2020/11/06/YV42AoPySg7jTG1.png" class="yuan"></image>
+      <image wx:if="{{index==4}}" src="https://i.loli.net/2020/11/06/flxFNBPwH95auAy.png" class="yuan"></image>
+    </view>
+
+    <view class="flex-item2">{{seat[index][0]}}
+      <view>{{seat[index][1]}}
+        <view>编号：{{seat[index][2]}}
+          <view>{{seat[index][3]}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex-item3">
+      <view>
+        <view>
+          <button class="mini-btn" bindtap="btn" type="default" size="mini" data-index="{{index}}">预约座位</button>
+
+          <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+          <!-- 弹出层 -->
+          <view class="modalDlg" wx:if="{{showModal}}">
+            <view class="modaltitle">
+              <view class="modalbtn_confirm" bindtap="ok"><text>确认</text></view>
+              <view class="modalbtn_cancel" bindtap="cancel_01"><text>取消</text></view>
+            </view>
+
+            <checkbox-group class="modalcheck" bindchange="checkboxChange">
+              <label class="box" wx:for="{{items}}">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+                <view class="label_de">{{item.name}}</view>
+              </label>
+            </checkbox-group>
+
+          </view>
+        </view>
+
+
+        <button class="mini-btn" bindtap="cancel" data-index="{{index}}" type="default" size="mini">取消收藏</button>
+      </view>
+    </view>
+  </view>
+  <!-- 
+    <view class="flex-box">
+    <view class="flex-item1">
+      <image src="https://i.loli.net/2020/11/06/VQsqfXMZGEuvkmz.png" class="yuan"></image>
+    </view>
+
+    <view class="flex-item2">3F
+      <view>靠窗
+        <view>编号：23
+          <view>有插座</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex-item3">
+      <view>
+         <button class="mini-btn" type="default" size="mini">预约座位</button>
+         <button class="mini-btn" type="default" size="mini">取消收藏</button>
+      </view>
+    </view>
+  </view>
+
+    <view class="flex-box">
+    <view class="flex-item1">
+      <image src="https://i.loli.net/2020/11/06/Vf2m97eExOTbL5I.png" class="yuan"></image>
+    </view>
+
+    <view class="flex-item2">3F
+      <view>靠窗
+        <view>编号：23
+          <view>有插座</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex-item3">
+      <view>
+         <button class="mini-btn" type="default" size="mini">预约座位</button>
+         <button class="mini-btn" type="default" size="mini">取消收藏</button>
+      </view>
+    </view>
+  </view>
+
+    <view class="flex-box">
+    <view class="flex-item1">
+      <image src="https://i.loli.net/2020/11/06/YV42AoPySg7jTG1.png" class="yuan"></image>
+    </view>
+
+    <view class="flex-item2">3F
+      <view>靠窗
+        <view>编号：23
+          <view>有插座</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex-item3">
+      <view>
+         <button class="mini-btn" type="default" size="mini">预约座位</button>
+         <button class="mini-btn" type="default" size="mini">取消收藏</button>
+      </view>
+    </view>
+  </view>
+
+    <view class="flex-box">
+    <view class="flex-item1">
+      <image src="https://i.loli.net/2020/11/06/flxFNBPwH95auAy.png" class="yuan"></image>
+    </view>
+
+    <view class="flex-item2">3F
+      <view>靠窗
+        <view>编号：23
+          <view>有插座</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex-item3">
+      <view>
+         <button class="mini-btn" type="default" size="mini">预约座位</button>
+         <button class="mini-btn" type="default" size="mini">取消收藏</button>
+      </view>
+    </view>
+  </view> -->
+</view>

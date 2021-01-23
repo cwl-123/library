@@ -1,0 +1,49 @@
+
+  <view class="flex-container">
+    <view class="flex-item1">
+      <image style="width:800rpx;height:300rpx;" src="https://i.loli.net/2020/11/04/PSNapxtOgbAmi3W.png"></image>
+    </view>
+    <view class="flex-item2">
+      <view class="box1">
+        <view class="minibox">读者信息:
+          <view>
+            <!-- 这里的信息直接由微信获取的 -->
+            {{nickName}}
+          </view>
+
+        </view>
+        <view class="minibox">预约位置：
+          <view>{{seat[0][2]}} {{seat[0][6]}}
+            <view>编号：{{seat[0][3]}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="box2">
+        <view class="minibox2">预约时间：{{seat[0][0]}}
+          <view>{{seat[0][1]}}</view>
+        </view>
+        <view class="minibox2">位置描述：
+          <view>{{seat[0][4]}}
+            <view>{{seat[0][5]}}</view>
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+
+    <view class="flex-item3">
+      <view class="image-parent">
+        <image style="width:750rpx;height:50vh;" src="https://i.loli.net/2020/11/04/7FpGlUQxbmsh29V.png">
+
+
+
+          <view class="child" bindtap="jumppage">确认入座</view>
+          <view class="child2" bindtap="cancel">放弃座位</view>
+          <view class="child3" bindtap="reservations">收藏座位</view>
+
+        </image>
+      </view>
+    </view>
+  </view>

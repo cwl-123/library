@@ -1,0 +1,19 @@
+<!--pages/introduction/introduction.wxml-->
+<view class="container">
+<image class="background" src='https://i.loli.net/2020/11/04/imZtjVFvoIGb2AT.jpg' mode="aspectFill"></image>
+<view class="upbox">
+</view>
+<view class="downbox">
+  <view class="box1">
+  <view class="whitebox" >
+    <text class="font" decode="{{true}}">使用说明：
+      &ensp; &ensp;1. 本预约系统的座位仅限于华南理工大学南校图书馆的预约区；
+      &ensp;&ensp;2. 预约的座位：仅可预约当日空余座位；在每日22：00后方可预约明日座位；
+      &ensp;&ensp;3. 请预约座位后珍惜学习资源，如发生预约座位而未到达图书馆签到情况，管理员有权禁止您预约座位14天；
+      &ensp;&ensp;4. 如对本系统存有意见，欢迎您通过个人界面中的“我要吐槽”联系我们；
+      &ensp;&ensp;5. 最终解释权归本系统管理员所有。
+    </text>
+  </view>
+  </view>
+</view>
+</view>

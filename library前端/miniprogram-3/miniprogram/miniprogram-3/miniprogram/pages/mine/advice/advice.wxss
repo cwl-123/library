@@ -1,0 +1,95 @@
+
+.box2{
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+  margin-top: 5%;
+  padding-top: 8%;
+  padding-left: 2%;
+  margin-left: 3%;
+  padding-right: 2%;
+  margin-right: 3%;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  font-size: 1.1rem;
+  line-height: 1.2em;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  font-family: "KaiTi";
+}
+
+.box3{
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+  padding-left: 2%;
+  margin-left: 3%;
+  padding-right: 2%;
+  margin-right: 3%;
+  padding-bottom: 8%;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  font-size: 1.1rem;
+  line-height: 1.2em;
+  letter-spacing: 0.1rem;
+  font-family: "KaiTi";
+}
+
+.box{
+  width: 89vw;
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+  padding-top: 5%;
+  padding-left: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-bottom: 8%;
+  border-radius: 30rpx;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  letter-spacing: 0.2rem;
+  position: fixed;
+  bottom: 2%;
+}
+
+.box4{
+  height:10vh;
+  width: 84vw;
+  margin-top: 3vh;
+  margin-right: 250rpx;
+  background-color: white;
+  margin-bottom: 30rpx;
+  display: flex;
+}
+
+.box5{
+  display: flex;
+  height: 7vh;
+  width: 30vw;
+  margin-left: 28vw;
+  /* margin-top: -90rpx; */
+  font-size: 38rpx;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.box6{
+  font-family: "KaiTi";
+}
+.background{
+  margin-top: -5%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: 100% 100%;
+  z-index: -1;
+  opacity: 0.83;
+}
+
+
+/* .text{
+  height: 20% !important;
+  width: 700rpx !important;
+} */

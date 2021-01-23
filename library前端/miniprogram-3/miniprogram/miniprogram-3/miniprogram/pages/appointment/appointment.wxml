@@ -1,0 +1,66 @@
+<view class="flex-container">
+  <view class="flex-item" wx:for="{{len}}">
+    <view class="flex-next" >
+      <image wx:if="{{index==0}}" mode="aspectFit" src="https://i.loli.net/2020/11/04/o4kMgl2ViAQLb1d.png"  bindtap="click" data-index="{{index}}"></image>
+      <image wx:if="{{index==1}}" mode="aspectFit" src="https://i.loli.net/2020/11/04/E2bdfiXGtCFMTKB.png" bindtap="click" data-index="{{index}}"></image>
+      <image wx:if="{{index==2}}" mode="aspectFit" src="https://i.loli.net/2020/11/04/RczbhxC2KuI53kX.png" bindtap="click" data-index="{{index}}"></image>
+    </view>
+    <view class="flex-next02"  bindtap="click" data-index="{{index}}">
+      <view class="border-setting">
+      <view class="textsetting">
+        <view>预约时间: {{seat[index][0]}}
+          <view>{{seat[index][1]}}
+            <view>楼层：{{seat[index][2]}} {{name_floor[index]}}
+              <view>座位号：{{seat[index][3]}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+ <!-- <view class="flex-item">
+    <view class="flex-next">
+      <image mode="aspectFit" src="https://i.loli.net/2020/11/04/E2bdfiXGtCFMTKB.png"></image>
+    </view>
+    <view class="flex-next02">
+      <view class="border-setting">
+      <view class="textsetting">
+        <view>预约时间: 2020.10.11
+          <view>上午（12：00-18：00）
+            <view>楼层：3F
+              <view>座位号：24</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  
+  </view>
+
+ <view class="flex-item">
+    <view class="flex-next">
+      <image mode="aspectFit" src="https://i.loli.net/2020/11/04/RczbhxC2KuI53kX.png"></image>
+    </view>
+    <view class="flex-next02">
+      <view class="border-setting">
+      <view class="textsetting">
+        <view>预约时间: 2020.10.11
+          <view>上午（18：00-24：00）
+            <view>楼层：3F
+              <view>座位号：25</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  
+  </view> -->
+
+</view>
+

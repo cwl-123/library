@@ -1,0 +1,195 @@
+
+
+.box{
+  width : 750rpx;
+  height :17vh;
+  background-color: #ffffff;
+  
+}
+
+.box2{
+  height: 10vh;
+  margin-top: 5vh;
+  background: #ffffff;
+  line-height: 6.5vh;
+  /* display: flex;
+  align-items: center; */
+}
+
+.box3{
+  height: 10vh;
+  margin-top: 5vh;
+  background: #ffffff;
+  line-height: 80rpx;
+  /* display: flex;
+  align-items: center; */
+}
+
+.box5{
+  width : 49vw;
+  height : 13vh;
+  background: #ffffff;
+  margin-top: -1.8vh;
+  /* margin-top: 50rpx; */
+  /* float: left; */
+  text-align: center;
+  line-height: 8.5vh;
+  /* border-right-style: solid;
+  border-right-color: gray;
+  border-width: 1rpx; */
+  
+}
+
+
+.box6{
+  width : 49vw;
+  height : 13vh;
+  /* margin-top: 50rpx; */
+  background: #ffffff;
+  float: right;
+  text-align: center;
+  line-height: 8.5vh;
+  margin-top: -11vh;
+  /* border-left-style: solid;
+  border-left-color: gray;
+  border-width: 1rpx; */
+}
+
+.box7{
+  margin-top: -6.5vh;
+  font-family: "SimHei";
+}
+
+.box8{
+  width : 750rpx;
+  height :20vh;
+  margin-top: -2vh;
+  background-color: white;
+  
+}
+
+.avatar{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 50%;
+}
+
+.avatar1{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-bottom: -10rpx;
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 50%;
+}
+
+.nickname{
+  margin-top: -105rpx;
+  margin-left: 200rpx;
+  display: flex;
+  font-size: 1.2rem;
+  font-family: "SimHei";
+}
+
+.push{
+  margin-top: -14%;
+  margin-left: 200rpx;
+  margin-right: 300rpx;
+  display: flex;
+  height: 30%;
+  width: 30%;
+}
+
+.butname{
+  margin-left: 20rpx;
+  font-size: 70%;
+}
+
+.img1{
+  height: 3vh;
+  width: 4.5vw;
+  display: flex;
+  padding-top: 3.5vh;
+  padding-left: 2vh;
+}
+
+.imgbox{
+  height: 10vh;
+  width: 10vw;
+}
+
+.img2{
+  height: 4vh;
+  width: 6vw;
+  display: flex;
+  padding-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.box4{
+  height: 10vh;
+  display: flex;
+  margin-top: -12vh;
+  padding-left: 9vw;
+  font-family: "SimHei";
+  font-size: 3vh;
+  position: relative;
+  line-height: 9.7vh;
+}
+
+.line{
+  height: 8vh;
+  margin-top: -10vh;
+  width: 0.5vw;
+  background-color: #bbbbbe;
+  margin-left: 50vw;
+}
+
+page{
+  background-color:white;
+}
+
+.container_box02{
+  display: flex;
+  flex-direction: row;
+
+  height: 10vh;
+  margin-top: 4vh;
+  background-color: #ffffff;
+  border: gray solid 2rpx;
+  border-radius: 20rpx;
+  border-style:dotted;
+  margin: 10rpx;
+  margin-bottom: 2vh;
+}
+.container_box02 .mini_boxs01{
+  flex:1;
+  align-self: center;
+  justify-content: center;
+  height: 10vh;
+  display: flex;
+}
+.container_box02 .mini_boxs02{
+  flex:9;
+  align-self: center;
+  align-items: center;
+  height: 10vh;
+  display: flex;
+}
+
+.container_box02 .mini_boxs03{
+  flex:1;
+  align-self: center;
+  align-items: center;
+  height: 10vh;
+  display: flex;
+}
+
+.container_box02 .mini_boxs04{
+  font-size: 3vh;
+  
+}

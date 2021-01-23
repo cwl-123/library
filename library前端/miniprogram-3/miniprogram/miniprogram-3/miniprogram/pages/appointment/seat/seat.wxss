@@ -1,0 +1,129 @@
+page{
+  height: 100%;
+}
+
+.flex-container{
+  width: 800rpx;
+  height: auto;
+  background-color: aliceblue;
+}
+
+
+.flex-container .item1{
+  height: 25vh;
+}
+
+
+.flex-container .flex-item2{
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  height: 25vh;
+  font-size: x-small;
+}
+
+.flex-container .flex-item2 .box1{
+  flex:1;
+  text-align: center;
+}
+.flex-container .flex-item2 .box1 .minibox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 28rpx;
+  align-items: center;
+  border: 4rpx solid rgb(198, 192, 192);
+  background-color:white;
+  box-shadow: 3rpx 5rpx 5rpx #888888;
+  width: 350rpx;
+  height: 11vh;
+  margin-bottom: 10rpx;
+  margin-left: 15rpx;
+}
+
+.flex-container .flex-item2 .box2{
+  flex:1;
+  text-align: center;
+}
+.flex-container .flex-item2 .box2 .minibox2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 28rpx;
+  align-items: center;
+  border: 4rpx solid rgb(198, 192, 192);
+  background-color:white;
+  box-shadow: 3rpx 5rpx 5rpx #888888;
+  width: 350rpx;
+  height: 11vh;
+  margin-bottom: 10rpx;
+  margin-left: 5rpx;
+}
+
+.flex-container .flex-item3{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 750rpx;
+  height: 50vh;
+}
+
+.flex-container .flex-item3 .image-parent{
+  position: relative;
+  width: 750rpx;
+  height: 50vh;
+}
+
+.flex-container .flex-item3 .image-parent .child{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 350rpx;
+  height: 90rpx; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 20rpx;
+  bottom: 400rpx;
+  margin: auto;
+  text-align: center;
+  background: rgb(25,160,205);
+  font-size: x-small;
+  border-radius: 10rpx;
+}
+.flex-container .flex-item3 .image-parent .child2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 350rpx;
+  height: 90rpx;   
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 20rpx;
+  bottom: 100rpx;
+  text-align: center;
+  background: rgb(24,220,46);
+  font-size: x-small;
+  border-radius: 10rpx;
+}
+
+.flex-container .flex-item3 .image-parent .child3{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 350rpx;
+  height: 90rpx;  
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 20rpx;
+  bottom: -200rpx;
+  text-align: center;
+  background: rgb(220, 102, 24);
+  font-size: x-small;
+  border-radius: 10rpx;
+}

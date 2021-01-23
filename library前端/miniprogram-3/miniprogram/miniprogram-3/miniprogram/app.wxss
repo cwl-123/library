@@ -1,0 +1,7 @@
+
+@import "iconfont.wxss";
+@import "iconfont1.wxss";
+/** 将页面的字体搞成手机系统默认字体 **/
+page{
+  font-family:Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Kaiti,Helvetica Neue,Helvetica,Arial,sans-serif!important;
+} 

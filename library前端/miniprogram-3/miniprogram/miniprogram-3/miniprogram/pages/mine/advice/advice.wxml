@@ -1,0 +1,23 @@
+<view class="content">
+  <image class='background' src="https://i.loli.net/2020/11/04/EcpflBoZKIqUVRT.jpg" mode="aspectFill"></image> 
+</view>
+
+<view class="box2">
+  本系统简介：
+</view>
+<view class="box3">
+  本系统由华南理工大学软件学院2018级软件工程卓越一班第五项目开发组开发并维护；系统主要功能项目为预约图书馆座位，为广大的华工学子的学习生活提供方便。
+</view>
+
+<view class="box">
+  <text class="box6">如果您在使用本系统时存在问题或者建议，欢迎您在下方输入框中写下您的高见，我们期待您的反馈。
+  </text>
+  <view class="box4">
+    <textarea  style="color:black;height:120rpx;width:84vw" placeholder="请输入反馈内容"></textarea>
+  </view>
+  
+  <button class="box5" bindtap="popevent">
+    <text class="box7">确定</text>  
+  </button>
+</view>
+

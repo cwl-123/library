@@ -1,0 +1,133 @@
+<view class="box">
+  <view wx:if="{{result == 'ok'}}" class="result"> <view class="headimg"> <image class="avatar" src="{{avatarUrl}}"></image> </view> <view class="nickname">{{nickName}}</view> </view> <!-- 当未授权的时候 --> <view wx:else class="result"> <image class="avatar1" src="https://i.loli.net/2020/11/04/6IxJhrvnoaXZAjS.png"></image>  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="push"><text class="butname">授权登录</text></button></view>
+</view>
+
+<view class="box8">
+  <view wx:if="{{result == 'ok'}}">
+    <navigator class="box5" url="../appointment/appointment">
+      <image class="iconfont_1 icon-gerenzhongxinwodeyuyue"></image>
+      <view class="box7">
+        <text>我的预约</text>
+      </view>
+    </navigator> 
+    <view class="line">
+
+    </view>
+    <navigator class="box6" url="../collection/collection">
+      <image class="iconfont_2 icon-shoucang"></image>
+      <view class="box7">
+        <text>收藏座位</text>
+      </view>
+    </navigator>
+  </view>
+  <view wx:else>
+    <navigator class="box5" bindtap="popevent">
+      <image class="iconfont_1 icon-gerenzhongxinwodeyuyue"></image>
+      <view class="box7">
+        <text>我的预约</text>
+      </view>
+    </navigator> 
+    <view class="line">
+
+    </view>
+    <navigator class="box6" bindtap="popevent">
+      <image class="iconfont_2 icon-shoucang"></image>
+      <view class="box7">
+        <text>收藏座位</text>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view wx:if="{{result == 'ok'}}">
+  <navigator class="container_box02" url="./introduction/introduction">
+    <view class="mini_boxs01">
+      <icon class="iconfont_ icon-guizeshuoming"></icon>
+      
+    </view>
+    <view class="mini_boxs02">
+      <view class="mini_boxs04">使用说明</view>
+    </view>
+
+    <view class="mini_boxs03">
+      <icon class="iconfont icon-youbian"></icon>
+    </view>
+  </navigator>
+
+  <navigator class="container_box02" url="/pages/sweep/sweep" open-type='switchTab'>
+    <view class="mini_boxs01">
+      <icon class="iconfont_ icon-weibiaoti--"></icon>
+      
+    </view>
+    <view class="mini_boxs02">
+      <view class="mini_boxs04">扫码入座</view>
+    </view>
+
+    <view class="mini_boxs03">
+      <icon class="iconfont icon-youbian"></icon>
+    </view>
+  </navigator>
+
+  <navigator class="container_box02" url="./advice/advice">
+    <view class="mini_boxs01">
+      <icon class="iconfont_ icon-dianhua-copy"></icon>
+      
+    </view>
+    <view class="mini_boxs02">
+      <view class="mini_boxs04">我要吐槽</view>
+    </view>
+
+    <view class="mini_boxs03">
+      <icon class="iconfont icon-youbian"></icon>
+    </view>
+  </navigator>
+
+</view>
+<view wx:else>
+
+  <navigator class="container_box02" bindtap="popevent">
+    <view class="mini_boxs01">
+      <icon class="iconfont_ icon-guizeshuoming"></icon>
+      
+    </view>
+    <view class="mini_boxs02">
+      <view class="mini_boxs04">使用说明</view>
+    </view>
+
+    <view class="mini_boxs03">
+      <icon class="iconfont icon-youbian"></icon>
+    </view>
+  </navigator>
+
+  <navigator class="container_box02" bindtap="popevent">
+    <view class="mini_boxs01">
+      <icon class="iconfont_ icon-weibiaoti--"></icon>
+      
+    </view>
+    <view class="mini_boxs02">
+      <view class="mini_boxs04">扫码入座</view>
+    </view>
+
+    <view class="mini_boxs03">
+      <icon class="iconfont icon-youbian"></icon>
+    </view>
+  </navigator>
+
+  <navigator class="container_box02" bindtap="popevent">
+    <view class="mini_boxs01">
+      <icon class="iconfont_ icon-dianhua-copy"></icon>
+      
+    </view>
+    <view class="mini_boxs02">
+      <view class="mini_boxs04">我要吐槽</view>
+    </view>
+
+    <view class="mini_boxs03">
+      <icon class="iconfont icon-youbian"></icon>
+    </view>
+  </navigator>
+
+
+
+
+</view>

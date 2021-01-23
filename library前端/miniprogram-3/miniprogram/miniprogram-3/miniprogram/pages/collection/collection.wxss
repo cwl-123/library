@@ -1,0 +1,157 @@
+
+.flex-container{
+  display: flex;
+  width: 750rpx;
+  flex-direction: column;
+}
+.flex-container .flex-box{
+  width: 750rpx;
+  height: 19vh;
+  background-color: rgb(254, 254, 254);
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-top: 10rpx;
+  margin-bottom: 5rpx;
+
+}
+.flex-container .flex-box .flex-item1{
+  flex: 1;
+  display: center;
+  /* align-items: center; */
+  /* justify-content: center; */
+  align-self: center;
+}
+.flex-container .flex-box .flex-item1 .yuan{
+  height: 200rpx;
+  width: 200rpx;
+}
+
+
+.flex-container .flex-box .flex-item2{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: medium;
+  font-family: STKaiti;
+}
+.flex-container .flex-box .flex-item3{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container .flex-box .flex-item3 .button{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+
+/* 无需 */
+.flex-container .flex-box .flex-item3 .btn {
+  width: 80px;
+  height: 35px;
+  background: #44b549;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  margin: 20px auto;
+  border-radius: 100px;
+}
+
+
+/* 遮罩层 */
+.flex-container .flex-box .flex-item3 .mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.5;
+}
+
+/* 全部引用 */
+
+/* 弹出层 */
+.flex-container .flex-box .flex-item3 .modalDlg {
+  width: 100%;
+  height: 40%;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left:0;
+  
+}
+
+.flex-container .flex-box .flex-item3 .modaltitle {
+  display: flex;
+  padding-top: 4px;
+  width: 80%;
+  height: 13%;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.flex-container .flex-box .flex-item3 .modalbtn_confirm {
+  display: flex;
+  width: 16%;
+  height: 100%;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  border: 0px;
+  color: #00B26A;
+}
+
+.flex-container .flex-box .flex-item3 .modalbtn_cancel {
+  display: flex;
+  width: 16%;
+  height: 100%;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  border: 0px;
+}
+
+.flex-container .flex-box .flex-item3 .modalcheck {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 100%;
+  width: 73%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.flex-container .flex-box .flex-item3 .label_de {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  justify-content: center;
+  font-size: medium;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.flex-container .flex-box .flex-item3 .box {
+  display: flex;
+}
+
+.flex-container .flex-box .flex-item3 .show{
+  display: flex;
+  height: 100px;
+  width: 100%;
+}
